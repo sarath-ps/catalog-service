@@ -3,6 +3,8 @@ package com.example.catalogservice.book;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+
 @RestController
 @RequestMapping("/books")
 public class BookController {
@@ -25,7 +27,7 @@ public class BookController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Book addBook(@RequestBody Book book) {
+    public Book addBook(@RequestBody @Valid Book book) {
         return bookService.addBook(book);
     }
 
@@ -36,7 +38,7 @@ public class BookController {
     }
 
     @PutMapping("/{isbn}")
-    public Book editBookDetails(@PathVariable String isbn, @RequestBody Book book) {
+    public Book editBookDetails(@PathVariable String isbn, @RequestBody @Valid Book book) {
         return bookService.editBookDetails(isbn, book);
     }
 }
