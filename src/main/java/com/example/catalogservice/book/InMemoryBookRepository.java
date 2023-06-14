@@ -28,7 +28,8 @@ public class InMemoryBookRepository implements BookRepository{
 
     @Override
     public Book save(Book book) {
-        return books.put(book.isbn(), book);
+        books.put(book.isbn(), book);
+        return findByIsbn(book.isbn()).orElseThrow(() -> new BookNotFoundException(book.isbn()));
     }
 
     @Override

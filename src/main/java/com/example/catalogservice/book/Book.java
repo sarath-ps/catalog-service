@@ -8,8 +8,8 @@ import javax.validation.constraints.Positive;
 public record Book(
         @NotBlank(message = "ISBN Can't be empty")
         @Pattern(
-                regexp = "^([0-9]{10}|[0-9]{13})$",
-                message = "The ISBN format must be valid."
+                regexp = "^([\\d]{10}|[\\d]{13})$",
+                message = "ISBN must be 10 or 13 characters long"
         )
         String isbn,
         @NotBlank(message = "title can't be empty") String title,
