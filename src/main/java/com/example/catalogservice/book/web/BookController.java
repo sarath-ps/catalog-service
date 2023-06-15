@@ -1,5 +1,7 @@
-package com.example.catalogservice.book;
+package com.example.catalogservice.book.web;
 
+import com.example.catalogservice.book.service.BookService;
+import com.example.catalogservice.book.domain.Book;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 

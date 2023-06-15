@@ -1,4 +1,4 @@
-package com.example.catalogservice.book;
+package com.example.catalogservice.book.domain;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;

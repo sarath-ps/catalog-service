@@ -1,6 +1,6 @@
 package com.example.catalogservice.book;
 
-import org.junit.jupiter.api.AfterAll;
+import com.example.catalogservice.book.domain.Book;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 

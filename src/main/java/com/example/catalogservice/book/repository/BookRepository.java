@@ -1,4 +1,6 @@
-package com.example.catalogservice.book;
+package com.example.catalogservice.book.repository;
+
+import com.example.catalogservice.book.domain.Book;
 
 import java.util.Optional;
 

@@ -1,5 +1,7 @@
 package com.example.catalogservice.book;
 
+import com.example.catalogservice.book.service.BookService;
+import com.example.catalogservice.book.web.BookController;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;

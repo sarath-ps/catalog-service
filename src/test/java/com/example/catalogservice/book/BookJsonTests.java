@@ -1,5 +1,6 @@
 package com.example.catalogservice.book;
 
+import com.example.catalogservice.book.domain.Book;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.json.JsonTest;

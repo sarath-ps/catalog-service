@@ -1,5 +1,9 @@
-package com.example.catalogservice.book;
+package com.example.catalogservice.book.service;
 
+import com.example.catalogservice.book.BookAlreadyExistsException;
+import com.example.catalogservice.book.BookNotFoundException;
+import com.example.catalogservice.book.domain.Book;
+import com.example.catalogservice.book.repository.BookRepository;
 import org.springframework.stereotype.Service;
 
 @Service

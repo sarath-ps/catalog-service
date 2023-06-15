@@ -1,5 +1,7 @@
-package com.example.catalogservice.book;
+package com.example.catalogservice.book.web;
 
+import com.example.catalogservice.book.BookAlreadyExistsException;
+import com.example.catalogservice.book.BookNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
