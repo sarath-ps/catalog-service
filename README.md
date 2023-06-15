@@ -57,4 +57,19 @@ Transfer-Encoding: chunked
     "price": 9.45,
     "title": "My Book"
 }
+```
 
+----
+
+## Valnerability Scanning
+
+```bash
+$ curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b ~/.local/bin
+$ ./gradlew build
+$ grype .
+```
+
+```
+$ ./gradlew bootBuildImage
+$ grype catalog-service:0.0.1-SNAPSHOT
+```
