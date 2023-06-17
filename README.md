@@ -73,3 +73,7 @@ $ grype .
 $ ./gradlew bootBuildImage
 $ grype catalog-service:0.0.1-SNAPSHOT
 ```
+
+```
+$ docker run  --name catalog-db -e POSTGRES_USER=user -e POSTGRES_PASSWORD=password -e POSTGRES_DB=catalog_db -p 5432:5432 postgres:14.4
+```

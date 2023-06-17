@@ -38,16 +38,21 @@ public class BookService {
     public Book editBookDetails(String isbn, Book book) {
 
         return bookRepository.findByIsbn(isbn)
-            .map(existingBook -> {
-                var updatedBook = new Book(
-                    existingBook.isbn(),
-                    book.title(),
-                    book.author(),
-                    book.price()
-                );
+                .map(existingBook -> {
+                    var updatedBook = new Book(
+                            existingBook.id(),
+                            book.isbn(),
+                            book.title(),
+                            book.author(),
+                            book.price(),
+                            book.publisher(),
+                            existingBook.createdDate(),
+                            existingBook.lastModifiedDate(),
+                            existingBook.version()
+                    );
 
-                return bookRepository.save(updatedBook);
-            })
-            .orElseGet(() -> addBook(book));
+                    return bookRepository.save(updatedBook);
+                })
+                .orElseGet(() -> addBook(book));
     }
 }
