@@ -18,6 +18,22 @@ bootRun {
     systemProperty 'spring.profiles.active', 'testData'
 }
 
+bootBuildImage {
+    imageName = "${project.name}:${version}"
+    environment = [
+            'BP_JVM_VERSION': '17.*'
+    ]
+
+    docker {
+        publishRegistry {
+            url = project.findProperty('registryUrl')
+            username = project.findProperty('registryUsername')
+            password = project.findProperty('registryToken')
+        }
+    }
+}
+
+
 repositories {
     mavenCentral()
 }
